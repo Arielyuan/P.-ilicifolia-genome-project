@@ -1,0 +1,5 @@
+Assemble and following pipeline.
+This pipeline include the following sections:
+reads filtering and genome assemble
+genome assessment
+synteny analysis with relative species
