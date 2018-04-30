@@ -9,7 +9,7 @@ my $eve = 5748;   #每个文件里面有多少个fasta
 my $sh = "/home/user106/user124/project/01.Populus_ilicifolia_genome/02.Annotation/02.genePrediction/09.blastESTs/01.pil-peu.sh"; #输出的sh文件
 my $blat = "~/bin/x86_64/blat"; #blat的路径
 my $genomefasta = "/home/user106/user124/project/01.Populus_ilicifolia_genome/02.Annotation/02.genePrediction/09.blastESTs/01.pilGenome.fa";  #需要评估的基因组文件
-my $output = "/home/user106/user124/project/01.Populus_ilicifolia_genome/02.Annotation/02.genePrediction/09.blastESTs/01.pil-peu.out";  #blat的输出文件
+my $output = "/home/user106/user124/project/01.Populus_ilicifolia_genome/02.Annotation/02.genePrediction/09.blastESTs/01.pil-peu.out";  #blat的输出文件夹
 
 my $fastafile;
 my $o =1;
