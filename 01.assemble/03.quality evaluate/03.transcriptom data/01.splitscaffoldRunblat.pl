@@ -1,6 +1,8 @@
 #!/usr/bin/perl -w
 #用peu的转录组数据比对到细叶杨的基因组上，来评估细叶杨基因组组装的完整性。
 #此脚本用将peu转录组全部的fasta数据拆成每100个文件，并输出比对的sh文件。
+#如果计算资源足够或者转录组比较小的话，可以不进行拆分，直接运行下面的命令：“~/bin/x86_64/blat pil.dna.fa Peu.nr.fa -out=blast8 pil-peu.output”。
+
 use strict;
 use Bio::SeqIO;
 
