@@ -3,8 +3,8 @@
 use strict;
 use Bio::SeqIO;
 
-my $blat_output = shift;
-my $query = shift;
+my $blat_output = shift;  #将上一步的输出结果（gff文件）全都cat到一起
+my $query = shift; #querry 的fasta序列
 my $op = shift;
 
 open (F,"<$blat_output") or die ("$!\n");
