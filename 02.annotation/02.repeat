@@ -1,0 +1,67 @@
+## 重复序列分为串联重复序序列和散在重复序列  
+### 用trf注释串联重复序列  
+```
+wget "https://tandem.bu.edu/trf/trf407b.linux.download.html" 
+./trf InputFile 2 7 7 80 10 50 2000 -d -h
+
+#可设置为1CPU,5内存
+InputFile: fasta格式
+2:match weight
+7:mismatch 
+7:indel delta
+80:PM, match probality
+10:PI, indel probality
+50:minscore,minimum alightment score to report
+2000:maxperiod,maximum period size to report
+-d:产生的屏蔽的的串联重复序列信息文件。
+-m:产生串联重复序列被屏蔽为N的序列文件。 
+-h:记录串联信息序列的文件
+```
+结果文件为以trf结尾的文件，输出结果及含义如下：
+```
+Sequence: scaffold20_cov124      #scaffold
+Parameters: 2 7 7 80 10 50 2000  #参数
+6127 6181 25 2.2 25 90 0 83 30 21 16 30 1.95 AGGCTAATCCATCAACATTATTGCA AGGCTAATCTATCAACATTATTGCAAGGCTATTCCGTCAACATTATTGCAAGGCT
+6127 起始位置 
+6181 终止位置 
+25   串联重复单元的大小
+2.2  重复次数
+25   库里重复序列的大小
+90   与邻近的重复匹配的百分比
+0    与邻近的重复匹配的插入缺失的百分比
+83   匹配的分值
+30   A在串联重复单元占的百分比
+21   C在串联重复单元占的百分比
+16   G在串联重复单元占的百分比
+30   T在串联重复单元占的百分比
+1.95 重复序列包含的信息量，即熵值
+AGGCTAATCCATCAACATTATTGCA   重复单元
+AGGCTAATCTATCAACATTATTGCAAGGCTATTCCGTCAACATTATTGCAAGGCT 重复序列
+```
+将trf文件转换成gff文件，方便后续处理
+```
+#!/usr/bin/perl -w
+use strict;
+my $file = shift;
+my $op = shift;
+open (F,"<$file") or die "$!\n";
+open (O,">$op") or die "$!\n";
+my $olds = $/;
+$/ = "Sequence: ";
+while (my $eve = <F>){
+    my @elements = split (/\n/,$eve);
+    for (my $i=7;$i<@elements;$i++){
+        if ($elements[$i]=~/^\d/){
+            print O "$elements[0]\t";
+            my @infor = split (/\s/,$elements[$i]);
+            print O "TRF\tTandemRepeat\t$infor[0]\t$infor[1]\t$infor[8]\t+\t.\tRepeatNum=$infor[3];RepeatSize=$infor[2];MatchPer=$infor[5];DelatePer=$infor[6];Consensus=$infor[13];\n";
+        }
+    }
+}
+$/=$olds;
+close F;
+close O;
+```
+### 用repeatmasker注释
+
+
