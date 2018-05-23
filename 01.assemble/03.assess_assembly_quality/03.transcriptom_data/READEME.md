@@ -8,7 +8,7 @@
    ```   
    
    3. 统计比对率的脚本  
-   ```
+   ```
    03.statistic.map.ratio.pl
    Table: Covrage of different map-ratio qurry genes.
    ```
