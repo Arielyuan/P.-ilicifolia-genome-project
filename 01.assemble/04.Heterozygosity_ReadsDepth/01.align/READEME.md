@@ -1,19 +1,20 @@
 This papline is for align, includ:
 
-#### realign.md  
-is the command line for align, rmdup, and realign
-  
-#### align.pl  
-can used for producing all align command line
+### realign.md  
+is the command line for align, rmdup, and realign  
 
-#### BamCount  
-contants two scripts which can generate the basic count of the bam file: 
+### align.pl  
+can used for producing all align command line  
+
+
+### BamCount  
+contants two scripts which can generate the basic count of the bam file:  
 ##### DepthCoverage.pl  
-for depth and coverage information
+for depth and coverage information  
 ##### MapRatio.count.pl  
-for mapration information
+for mapration information  
 
-#### scripts  
+### scripts  
 contain many scripts for chart.
 ##### Base.Depth1.BasicCount.pl  
 计算每一个深度下对应的碱基数目
