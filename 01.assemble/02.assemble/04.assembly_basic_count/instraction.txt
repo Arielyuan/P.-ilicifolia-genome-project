@@ -1,0 +1,27 @@
+注：
+#这里的脚本用于做基因组组装中的表格，具体内容如下所示
+#每个脚本的用途在注释信息第二行
+#使用方法在注释信息的第三行
+
+
+1. * 过滤前后reads数据量统计表：01.filter_statistic.pl  
+
+2. * 17-mer种类分布图与17-mer分析统计表格  
+   #k-mer分析要用到SOAPec_v2.01软件：  
+   2.1 下载wget"http://sourceforge.net/projects/soapdenovo2/files/ErrorCorrection/SOAPec_v2.02.tgz/download"  
+   2.2 写config文件（kmercount list）将paired end文件输入，用换行符隔开，一般用小片段的reads进行统计即可  
+   2.3 /home/share/user/user101/software/soapdenovo/SOAPec_src_v2.02/bin/KmerFreq_AR -k 17 -t 10 -p pil 03.500bp.kmercount_list > 03.conkerfreq.log -q 33 2>03.conkerfreq.err #-k kmer大小 -t 要少于线程数，该值越高，速度越快 -p 输出文件前缀 -q 33/64最终的质量是33还是64  
+   2.4 跑出来的文件即可直接传入excel中作图  
+
+3. * 组装质量统计表（包括GC含量，n值，contig，scaffoldN50等）：02.assemble_quality.pl  
+
+4. * GC含量在基因组中的分布图（以500bp为窗口，并去掉N值大于250bp的窗口）：03.GCcontant.pl  
+
+#注：以下图表需要用到samtools软件跑出来有关测序深度以及SNP的结果  
+5. * 测序深度分布图（该区间深度的碱基数目以及其占所有碱基数目的比例）：脚本1是计算了每个深度下对应的碱基数目；脚本2以10x为一个区间，并合并>200x的数量，计算每个区间内对应的碱基数目：04.depth1.pl，04.depth2.pl  
+
+6. * GC含量与测序深度分析图（以20kb为窗口，计算每个窗口的GC含量和平均深度作图）：05.GCcount_depth.pl   
+
+7. * 基因组杂合度分析图（以20kb为窗口，统计过滤后每个窗口SNP的数量以及其占每个窗口的比例#此脚本还将输出过滤后的vcf信息): 06.SNPcount_filter.pl
+
+8. * 统计整个基因组的杂合度：07.genome_heter.pl
