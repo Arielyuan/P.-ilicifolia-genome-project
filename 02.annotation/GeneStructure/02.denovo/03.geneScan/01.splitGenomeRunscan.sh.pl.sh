@@ -1,0 +1,1 @@
+/home/user106/user124/software/03.gene_prediction/02.denovo/genescan/genscan /home/user106/user124/software/03.gene_prediction/02.denovo/genescan/Arabidopsis.smat scaffold/1.fa >/home/user106/user124/project/01.Populus_ilicifolia_genome/02.Annotation/02.genePrediction/05.denovo/03.genescan_prediction/scaffold_output/1.txt

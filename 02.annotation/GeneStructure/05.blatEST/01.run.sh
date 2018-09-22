@@ -1,0 +1,1 @@
+ ~/bin/x86_64/blat pil.dna.fa Peu.nr.fa -out=blast8 pil-peu.output

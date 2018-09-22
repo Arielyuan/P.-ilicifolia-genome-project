@@ -1,0 +1,1 @@
+/home/user106/user124/software/03.gene_prediction/02.denovo/GlimmerHMM/train/trainGlimmerHMM 01.pilmfasta.fa 01.pil_exon_file

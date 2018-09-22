@@ -1,0 +1,1 @@
+/home/user106/user124/software/03.gene_prediction/02.denovo/gm_et_linux_64/gmes_petap/gmhmme3 00.pilGenome.fa -m /home/user106/user124/software/03.gene_prediction/02.denovo/genemark_hmm_euk_linux_64/ehmm/a_thaliana.mod -o pilGM.gff -f gff3

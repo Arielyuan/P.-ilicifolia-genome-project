@@ -1,0 +1,42 @@
+#genescane输出文件格式说明：
+GENSCAN 1.0	Date run: 21-Nov-103	Time: 06:36:32
+
+Sequence HS307871 : 4514 bp : 52.19% C+G : Isochore 3 (51 - 57 C+G%)
+
+Parameter matrix: HumanIso.smat
+
+Predicted genes/exons:
+
+Gn.Ex Type S .Begin ...End .Len Fr Ph I/Ac Do/T CodRg P.... Tscr..
+----- ---- - ------ ------ ---- -- -- ---- ---- ----- ----- ------
+
+ 1.01 Intr +    739    851  113  0  2   49   66    74 0.287   0.98
+ 1.02 Intr +   1748   1860  113  2  2   53  110    80 0.866   7.23
+ 1.03 Intr +   1976   2055   80  0  2   97   94    10 0.999   2.27
+ 1.04 Intr +   2132   2194   63  1  0   84   80    87 0.990   6.91
+ 1.05 Intr +   2434   2631  198  0  0   88   -9   263 0.895  16.67
+ 1.06 Intr +   2749   2910  162  0  0  107  109    97 0.965  14.39
+ 1.07 Intr +   3279   3416  138  2  0   52   77   126 0.812   9.07
+ 1.08 Intr +   3576   3676  101  2  2   87  119   113 0.996  13.71
+ 1.09 Intr +   3780   3846   67  0  1   63   77    46 0.998   0.40
+ 1.10 Term +   4179   4340  162  2  0   75   47   276 0.979  20.45
+ 1.11 PlyA +   4397   4402    6                               1.05
+
+Gn.Ex : gene number, exon number (for reference)
+Type  : Init = Initial exon (ATG to 5' splice site)
+        Intr = Internal exon (3' splice site to 5' splice site)
+        Term = Terminal exon (3' splice site to stop codon)
+        Sngl = Single-exon gene (ATG to stop)
+        Prom = Promoter (TATA box / initation site)
+        PlyA = poly-A signal (consensus: AATAAA)
+S     : DNA strand (+ = input strand; - = opposite strand)
+Begin : beginning of exon or signal (numbered on input strand)
+End   : end point of exon or signal (numbered on input strand)
+Len   : length of exon or signal (bp)
+Fr    : reading frame (a forward strand codon ending at x has frame x mod 3)
+Ph    : net phase of exon (exon length modulo 3)
+I/Ac  : initiation signal or 3' splice site score (tenth bit units)
+Do/T  : 5' splice site or termination signal score (tenth bit units)
+CodRg : coding region score (tenth bit units)
+P     : probability of exon (sum over all parses containing exon)
+Tscr  : exon score (depends on length, I/Ac, Do/T and CodRg scores)

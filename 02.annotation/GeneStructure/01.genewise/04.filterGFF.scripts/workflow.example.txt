@@ -1,0 +1,10 @@
+01-1.ath.standard.gff     03-1.peu.standard.gff     05-1.rco.standard.gff
+01-2.ath.ftstopcoden.gff  03-2.peu.ftstopcoden.gff  05-2.rco.ftstopcoden.gff
+01-3.ath.ftoverlap.gff    03-3.peu.ftoverlap.gff    05-3.rco.ftoverlap.gff
+01-4.ath.final.gff        03-4.peu.final.gff        05-4.rco.final.gff
+01-5.ath.rank.gff         03-5.peu.rank.gff         05-5.rco.rank.gff
+02-1.cpa.standard.gff     04-1.ptr.standard.gff     06-1.all.catfinal.gff
+02-2.cpa.ftstopcoden.gff  04-2.ptr.ftstopcoden.gff  06-2.all.ftoverlap.gff
+02-3.cpa.ftoverlap.gff    04-3.ptr.ftoverlap.gff    pilfinalcount
+02-4.cpa.final.gff        04-4.ptr.final.gff
+02-5.cpa.rank.gff         04-5.ptr.rank.gff

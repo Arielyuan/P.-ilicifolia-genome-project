@@ -1,0 +1,10 @@
+PROTEIN Athaliana       3
+PROTEIN Cpapaya         3
+PROTEIN Populus_euphratica      6
+PROTEIN Populus_trichocarpa     5
+PROTEIN Rcommunis               4
+ABINITIO_PREDICTION     AUGUSTUS                1
+ABINITIO_PREDICTION     GeneScan                1
+ABINITIO_PREDICTION     GlimmerHMM              1
+ABINITIO_PREDICTION	GeneMark.hmm3		1
+TRANSCRIPT		assembler-pasa_zyDB	8

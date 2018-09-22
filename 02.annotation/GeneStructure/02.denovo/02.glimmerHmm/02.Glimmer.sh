@@ -1,0 +1,1 @@
+/home/user106/user124/software/03.gene_prediction/02.denovo/GlimmerHMM/bin/glimmerhmm_linux_x86_64 01.pil3000mfasta.fa -d /home/user106/user124/project/01.Populus_ilicifolia_genome/02.Annotation/02.genePrediction/05.denovo/02.glimmerHmm_prediction/TrainGlimmM2016-01-14D11:26:29

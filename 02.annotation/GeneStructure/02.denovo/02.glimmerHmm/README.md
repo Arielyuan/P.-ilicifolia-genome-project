@@ -1,0 +1,2 @@
+#这个软件的训练集是将genewise预测的基因随机取出来3000条作为训练集
+#脚本在tools/commonScripts/random_extract.gene.pl

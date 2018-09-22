@@ -1,0 +1,13 @@
+./02.gene_infor_chart.pl 02.pil-peu-ptr.count.txt peu.filtered.gff ptr.filtered.gff 09.pil.evm.33684.gff; 
+head -n1 02.pil-peu-ptr.count.txt >head.txt;
+grep "Exon_length" 02.pil-peu-ptr.count.txt > Exon_length.txt;
+grep "CDS_length" 02.pil-peu-ptr.count.txt > CDS_length.txt;
+grep "Exon_number" 02.pil-peu-ptr.count.txt > Exon_number.txt;
+grep "Intron_length" 02.pil-peu-ptr.count.txt > Intron_length.txt;
+grep "mRNA_length" 02.pil-peu-ptr.count.txt > mRNA_length.txt;
+cat head.txt Exon_length.txt >Exon_length.head.txt;
+cat head.txt CDS_length.txt > CDS_length.head.txt;
+cat head.txt Exon_number.txt > Exon_number.head.txt;
+cat head.txt Intron_length.txt > Intron_length.head.txt;
+cat head.txt mRNA_length.txt > mRNA_length.head.txt;
+/home/software/R/R-3.2.2/bin/Rscript five_type_compare.r;
